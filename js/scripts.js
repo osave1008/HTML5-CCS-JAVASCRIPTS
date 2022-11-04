@@ -47,3 +47,17 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 // Implemente el evento para validar
 // btn.addEventListener("click", function (evt) ....
+const btn = document.getElementById("loginBtn");
+const user = document.getElementById("inputEmail");
+const pwd = document.getElementById("inputPassword");
+
+btn.addEventListener("click", function (evt){
+  if(user.value == "admin" && pwd.value == "12345"){
+    console.log("Ingreso Exitoso...");
+    return true;
+  }else{
+    evt.preventDefault();
+    console.log("usuario o password incorrecto...");
+    return false;
+  }
+});
